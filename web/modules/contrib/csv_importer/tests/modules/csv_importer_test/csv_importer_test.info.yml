@@ -1,0 +1,25 @@
+name: CSV importer test
+type: module
+description: 'Import content from CSV test.'
+core: '8.x'
+core_version_requirement: ^8 || ^9 || ^10
+package: CSV
+dependencies:
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:link
+  - drupal:path
+  - drupal:text
+  - drupal:options
+  - drupal:datetime
+  - drupal:menu_ui
+  - drupal:file
+  - drupal:editor
+  - drupal:filter
+
+hidden: true
+
+# Information added by Drupal.org packaging script on 2023-04-04
+version: '8.x-1.16'
+project: 'csv_importer'
+datestamp: 1680596957

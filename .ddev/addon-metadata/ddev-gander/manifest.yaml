@@ -1,0 +1,12 @@
+name: ddev-gander
+repository: tag1consulting/ddev-gander
+version: v0.0.7
+install_date: "2024-08-29T11:39:56-07:00"
+project_files:
+    - config.gander.yaml
+    - docker-compose.gander.yaml
+    - phpunit.xml.example
+    - gander-config/
+    - gander-dashboards/
+global_files: []
+removal_actions: []

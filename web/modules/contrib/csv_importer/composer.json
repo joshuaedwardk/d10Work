@@ -1,0 +1,31 @@
+{
+  "name": "drupal/csv_importer",
+  "type": "drupal-module",
+  "description": "CSV Importer.",
+  "keywords": ["drupal", "csv", "import"],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "Lasha Badashvili",
+      "email": "lashabp@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Drupal\\csv_importer\\": "./src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Drupal\\Tests\\csv_importer\\": "./tests/src"
+    }
+  }
+}

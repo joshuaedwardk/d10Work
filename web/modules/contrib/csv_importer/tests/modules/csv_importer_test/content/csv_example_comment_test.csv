@@ -1,0 +1,2 @@
+name,entity_type,entity_id,field_name,uid,comment_type,subject,comment_body
+CSV Importer comment 1,node,1,comment,0,comment,Subject 1,Body 1

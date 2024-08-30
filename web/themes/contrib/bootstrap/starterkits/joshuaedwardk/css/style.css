@@ -1,0 +1,137 @@
+/**
+ * If using a CSS pre-processor, tell it to overwrite this file. If not, place
+ * your custom CSS modifications here.
+ */
+.timeline {
+  position: relative;
+  margin: 50px 0;
+  padding: 0;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #b22;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #b22;
+  margin-left: -12px;
+  z-index: 1;
+}
+
+.timeline-item .timeline-content {
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-item .timeline-image {
+  padding: 10px;
+  position: relative;
+  vertical-align: middle;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.timeline-item .timeline-image img {
+  border-radius: 4px;
+  width: 100%; /* Ensure image scales correctly */
+}
+
+.timeline-item .timeline-date {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #b22;
+  margin-bottom: 10px;
+}
+
+.timeline-item .timeline-body p {
+  margin: 0;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Layout for odd and even items */
+.timeline-item:nth-child(odd) .timeline-image {
+  order: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  order: 2;
+  text-align: left;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  order: 1;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-image {
+  order: 2;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .timeline:before {
+    display: none;
+  }
+
+  .timeline-item:before {
+    display: none;
+  }
+
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-item .timeline-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-item .timeline-date {
+    order: 1;
+    text-align: center;
+  }
+
+  .timeline-item .timeline-image {
+    order: 2;
+    display:none;
+  }
+
+  .timeline-item .timeline-body {
+    order: 3;
+    text-align: left;
+  }
+}

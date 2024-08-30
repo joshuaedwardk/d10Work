@@ -1,0 +1,16 @@
+{# views-view--timeline_view--page.html.twig #}
+{% for row in rows %}
+  {% set content_type = row.content['#node'].bundle %}
+  {% if content_type == 'timeline' %}
+    {# Customize the output for timeline content type #}
+    <div class="timeline-item">
+      {# Output the fields here, for example: #}
+      {{ row.content }}
+    </div>
+  {% else %}
+    {# Default output for other content types #}
+    <div class="default-item">
+      {{ row.content }}
+    </div>
+  {% endif %}
+{% endfor %}
